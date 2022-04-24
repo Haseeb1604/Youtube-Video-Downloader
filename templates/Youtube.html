@@ -5,8 +5,8 @@
         Convert and download all YouTube videos to high quality .mp4 files, by just inputting the url.
     </div>
     <form method="POST">
-        <input class="form-control mt-3" type="text" placeholder="Enter the YouTube video URL" aria-label="default input example" name="url">
-        <button type="submit" class="btn btn-danger mt-3">Convert</button>
+        <input class="form-control mt-3 p-2" type="text" placeholder="Enter the YouTube video URL" aria-label="default input example" name="url">
+        <button type="submit" class="btn btn-danger mt-3 p-1">Convert</button>
     </form>
     {% if download == True %}
         {% include "download.html" %}
