@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.side-navbar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  margin-left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
+}
+
+.nav-link a{
+  color: white;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #fff;
+}
+
+.nav-link.active a,
+.nav-link:hover a{
+  color: black !important;
+}
+
+.side-navbar .logo img{
+  width: 100px;
+}
+
+.side-navbar .nav-link svg{
+  width: 30px;
+  height: 30px;
+}
+
+.side-navbar .nav-link svg path{
+  fill : white;
+}
+
+.nav-link .youtube svg path{
+  fill: #FF0000!important;
+}
+
+.nav-link .facebook svg path{
+  fill: #3b5998!important;
+}
+
+.nav-link .instagram svg path{
+  fill: #C13584!important;
+}
+
+.my-container {
+  transition: 0.4s;
+}
+
+.active-nav {
+  margin-left: 0;
+}
+
+/* for main section */
+.active-cont {
+  margin-left: 250px;
+}
+
+#menu-btn {
+  background-color: #100901;
+  color: #fff;
+  margin-left: -62px;
+}
+
+.my-container input {
+  border-radius: 2rem;
+  padding: 2px 20px;
+}
