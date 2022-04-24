@@ -24,7 +24,7 @@ def facebook():
 
 @app.route("/instagram")
 def instagram():
-    return render_template("facebook.html")
+    return render_template("instagram.html")
 
 @app.route("/download", methods = ["GET", "POST"])
 def download_video():

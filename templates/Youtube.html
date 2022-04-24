@@ -1,12 +1,24 @@
 {% extends 'layout.html' %}
+
+{% block description %}
+    <meta name="description" content="Youtube Video Downloader is an online tool to download Youtube Videos">
+{% endblock description %}
+
+{% block keywords %}
+    <meta name="keywords" content="Youtube Video Downloader, Download YouTube Video, YouTube Video Downloader">
+{% endblock keywords %}
+
+{% block title %}Youtube Video Downloader{% endblock title %}
+{% block ytactive %}active{% endblock ytactive %}
+
 {% block content %}
     <h2 class="mt-3 text-center">Youtube Video Downloader</h2>
     <div class="mt-2 text-center">
         Convert and download all YouTube videos to high quality .mp4 files, by just inputting the url.
     </div>
-    <form method="POST">
+    <form method="POST" class="container mx-auto">
         <input class="form-control mt-3 p-2" type="text" placeholder="Enter the YouTube video URL" aria-label="default input example" name="url">
-        <button type="submit" class="btn btn-danger mt-3 p-1">Convert</button>
+        <button type="submit" class="btn btn-danger mt-3 py-2 px-3">Convert</button>
     </form>
     {% if download == True %}
         {% include "download.html" %}
