@@ -1,15 +1,9 @@
-asttokens==2.0.5
 click==8.1.2
 colorama==0.4.4
-executing==0.8.3
 Flask==2.1.1
+gunicorn==20.1.0
 itsdangerous==2.1.2
 Jinja2==3.1.1
 MarkupSafe==2.1.1
-parso==0.8.3
-pure-eval==0.2.2
 pytube==12.0.0
-six==1.16.0
-traitlets==5.1.1
-wcwidth==0.2.5
 Werkzeug==2.1.1
