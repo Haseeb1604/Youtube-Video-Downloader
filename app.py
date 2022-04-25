@@ -1,3 +1,4 @@
+from doctest import debug
 from flask import Flask, render_template, request, url_for, redirect, send_file, session
 from pytube import YouTube
 from io import BytesIO
@@ -43,4 +44,4 @@ def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
