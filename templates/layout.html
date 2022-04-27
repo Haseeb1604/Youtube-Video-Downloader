@@ -20,6 +20,8 @@
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
 
   <title>{% block title %}{% endblock title %}</title>
+
+  <script src="{{ url_for('static', filename = 'Script/ajax.js') }}"></script>
 </head>
 
 <body>
@@ -27,8 +29,8 @@
     <nav class="navbar navbar-expand-md navbar-dark w-100">
       <div class="container-lg">
         
-        <a class="navbar-brand" href="{{ url_for('index') }}">
-          <img src="{{ url_for('static', filename = 'Logo1.png') }}" alt="Logo">
+        <a class="navbar-brand" href="#">
+          <!-- <img src="{{ url_for('static', filename = 'Logo1.png') }}" alt="Logo"> -->
         </a>
        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -89,20 +91,6 @@
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-  
-  <script>
-    window.onload = () => {
-      const downloadBtn = document.querySelector('#download_btn');
-      const loadingBtn = document.querySelector('#loading_btn');
-
-      if (downloadBtn && loadingBtn) {
-        downloadBtn.addEventListener('click', e => {
-          downloadBtn.style.display = 'none';
-          loadingBtn.style.display = 'block';
-        })
-      }
-    }
   </script>
   <script src="{{ url_for('static', filename = 'Script/index.js')}}"></script>
 </body>
