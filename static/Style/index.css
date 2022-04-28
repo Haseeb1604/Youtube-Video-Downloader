@@ -12,94 +12,15 @@ html {
 body {
   min-height: 100vh;
   background-color: #fff;
+  font-size: 16px;
 }
-/* 
-.side-navbar {
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  margin-left: -300px;
-  background-color: #100901;
-  transition: 0.5s;
-}
-
-@media (max-width: 768px) {
-  .side-navbar{
-    z-index: 99;
-  }
-}
-
-.nav-link a{
-  color: white;
-}
-
-.nav-link.active,
-.nav-link:hover {
-  background-color: #fff;
-}
-
-.nav-link.active a,
-.nav-link:hover a{
-  color: black !important;
-}
-
-.side-navbar .logo img{
-  width: 100px;
-}
-
-.side-navbar .nav-link svg{
-  width: 30px;
-  height: 30px;
-}
-
-.side-navbar .nav-link svg path{
-  fill : white;
-}
-
-.nav-link .youtube svg path{
-  fill: #FF0000!important;
-}
-
-.nav-link .facebook svg path{
-  fill: #3b5998!important;
-}
-
-.nav-link .instagram svg path{
-  fill: #C13584!important;
-}
-
-.my-container {
-  transition: 0.4s;
-}
-
-.active-nav {
-  margin-left: 0;
-}
-
-
-.active-cont {
-  margin-left: 250px;
-}
-
-#menu-btn {
-  background-color: #100901;
-  color: #fff;
-  margin-left: -62px;
-}
-
-.my-container input {
-  border-radius: 2rem;
-  padding: 2px 20px;
-} */
-
 
 .fixed-top {
   top: 0;
 }
 
 .fixed-top .navbar {
-  padding: 2px 0;
+  padding: 5px 0;
 }
 
 .navbar .navbar-brand {
@@ -112,7 +33,7 @@ body {
 }
 
 .navbar .nav-item .nav-link {
-  color: #fff;
+  color: #fff; 
   font-size: 1em;
   font-weight: 500;
   align-self: center;
@@ -120,15 +41,6 @@ body {
   -webkit-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
-}
-
-@media (max-width: 768px){
-  .navbar .nav-item{
-    margin: 0 auto;
-  }
-  .navbar .nav-item .nav-link {
-    margin: 4px auto;
-  }
 }
 
 .navbar .nav-item:hover .nav-link,
@@ -193,4 +105,64 @@ body {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
   -ms-transform: rotate(45deg) translate(-5px, -6px);
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+main{
+  margin-top: 15px;
+}
+
+main .heading{
+  font-size: calc(1.325em + .9vw)!important;
+}
+
+main .para{
+  font-size: calc(.4em + .9vw)!important;
+}
+
+.youtubeForm input{
+  font-size: calc(.49em + .9vw)!important;
+}
+
+.downloadForm .thumbnail_img{
+  height: 100%!important;
+}
+
+@media (min-width: 990px) {
+  main .para{
+    font-size: calc(.5em + .9vw)!important;
+  }
+}
+
+@media (max-width: 768px){
+  body{
+    font-size: 15px;
+  }
+  .navbar .nav-item{
+    margin: 0 auto;
+  }
+  .navbar .nav-item .nav-link {
+    margin: 4px auto;
+  }
+  .downloadForm .thumbnail_img{
+    height: auto!important;
+  }
+}
+
+@media (max-width: 420px) {
+  body{
+    font-size: 14px;
+  }
+  main .heading{
+    font-size: calc(1.25em + .9vw)!important;
+  }
+  main .para{
+    font-size: calc(.55em + .9vw)!important;
+  }
+  .downloadForm .card-body{
+    text-align: center
+  }
+  .downloadForm button{
+    padding: 6px 20px;
+    font-size: calc(.75em + .9vw);
+  }
 }

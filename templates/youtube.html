@@ -13,8 +13,8 @@
 {% block ytactive %}active{% endblock ytactive %}
 
 {% block content %}
-    <h2 class="mt-3 text-center">Youtube Video Downloader</h2>
-    <div class="mt-2 text-center">
+    <h2 class="mt-3 heading text-center">Youtube Video Downloader</h2>
+    <div class="mt-2 para text-center">
         Convert and Download all YouTube videos to high quality mp4 or mp3 files, by just inputting the url.
     </div>
 
@@ -33,7 +33,7 @@
         </button>
     </div>
 
-    <form class="container mx-auto" id="youtubeForm">
+    <form class="container-md mx-auto youtubeForm" id="youtubeForm">
         <input 
             class="form-control mt-3 p-2" 
             type="text" 
@@ -58,19 +58,18 @@
         </button>
     </form>
     
-    <form action="/download" method="post" id="downloadForm" style="display: none">
+    <form action="/download" method="post" class="downloadForm" id="downloadForm" style="display: none">
         <div class="card my-4 mx-auto" style="max-width: 1300px;">
             <div class="row no-gutters">
               
-              <div class="col-md-5">
+              <div class="col-sm-5 col-xs-4">
                 <img 
                     src="" 
                     class="card-img thumbnail_img" 
-                    alt="youtube thumbnail image" 
-                    style="height: 100%" />
+                    alt="youtube thumbnail image"/>
               </div>
 
-              <div class="col-md-7">
+              <div class="col-sm-7 col-xs-8">
                 <div class="card-body">
                   <h5 class="card-title"></h5>
                   <p class="card-text">
@@ -87,7 +86,7 @@
                         id = "download_btn">
                       Download
                     </button>
-                    <button 
+                    <!-- <button 
                         class="btn btn-danger mt-3" 
                         type="button" 
                         style="display: none" 
@@ -97,7 +96,7 @@
                         role="status" 
                         aria-hidden="true"></span>
                       Loading...
-                    </button>
+                    </button> -->
                   </p>
                 </div>
               </div>
