@@ -43,7 +43,7 @@ def download_video():
         video.stream_to_buffer(buffer)
         buffer.seek(0)
         return send_file(buffer, as_attachment=True, download_name=url.title, mimetype="video/mp4") 
-    return jsonify({'error': 'Something went wrong'})
+    return render_template('error.html', error="There is an error whil downloading your file please try again later")
 
 @app.errorhandler(404)
 def page_not_found(error):
