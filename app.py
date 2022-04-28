@@ -45,6 +45,10 @@ def download_video():
         return send_file(buffer, as_attachment=True, download_name=url.title+'.mp4', mimetype=video.mime_type) 
     return jsonify({'error': 'Something went wrong'})
 
+@app.route("/sitemap")
+def sitemap():
+    return render_template("sitemap.xml")
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
