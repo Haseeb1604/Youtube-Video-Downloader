@@ -1,5 +1,5 @@
 from doctest import debug
-from flask import Flask, render_template,jsonify, request, url_for, redirect, send_file, session
+from flask import Flask, render_template,jsonify, request, send_file, session, send_from_directory
 from pytube import YouTube
 from io import BytesIO
 
@@ -45,9 +45,10 @@ def download_video():
         return send_file(buffer, as_attachment=True, download_name=url.title+'.mp4', mimetype=video.mime_type) 
     return jsonify({'error': 'Something went wrong'})
 
-@app.route("/sitemap")
-def sitemap():
-    return render_template("sitemap.xml")
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 @app.errorhandler(404)
 def page_not_found(error):
