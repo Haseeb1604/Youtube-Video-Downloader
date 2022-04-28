@@ -12,8 +12,15 @@ let toggleFormBtn = (downloadbtn, loadbtn, load=true) => {
 const main = () => {
   const youtubeForm = $("#youtubeForm");
   const downloadform = $("#downloadForm");
-  const downloadBtn = $('#download_btn');
-  const download_loadingBtn = $('#loading_btn');
+
+  // const downloadBtn = $('#download_btn');
+  // const download_loadingBtn = $('#loading_btn');
+
+  // if(downloadBtn){
+  //   downloadBtn.addEventListener('click', () =>{
+  //     toggleFormBtn(downloadBtn, download_loadingBtn);
+  //   })
+  // }
 
   // YouTube Form submission event
   youtubeForm.addEventListener('submit', (e) => {
@@ -61,26 +68,30 @@ const main = () => {
   })
 
   // Download form submission
-  downloadform.addEventListener('submit', e => {
-    e.preventDefault();
+  // downloadform.addEventListener('submit', e => {
+  //   e.preventDefault();
 
-    let formData = new FormData(downloadform);
-    ajax({
-      url: '/download',
-      method: "POST",
-      data: formData,
-      onprogress: () => {
-        toggleFormBtn(downloadBtn,download_loadingBtn, true)
-      },
-      onsuccess: () => {
-        toggleFormBtn(downloadBtn,download_loadingBtn, false)
-      },
-      onfailure: () =>{
-        toggleFormBtn(downloadBtn,download_loadingBtn, false)
-      }
-    })
+  //   let formData = new FormData(downloadform);
+  //   ajax({
+  //     url: '/download',
+  //     method: "POST",
+  //     data: formData,
+  //     onprogress: (data) => {
+  //       console.log(data);
+  //       toggleFormBtn(downloadBtn,download_loadingBtn, true)
+  //     },
+  //     onsuccess: (response, status, statusText) => {
+  //       console.log(status, statusText);
+  //       console.log(response);
+  //       toggleFormBtn(downloadBtn,download_loadingBtn, false)
+  //     },
+  //     onfailure: (data, status) => {
+  //       console.log(data, status);
+  //       toggleFormBtn(downloadBtn,download_loadingBtn, false)
+  //     }
+  //   })
   
-  })
+  // })
 
 }
 

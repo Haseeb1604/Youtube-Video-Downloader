@@ -33,7 +33,7 @@ def facebook():
 def instagram():
     return render_template("instagram.html")
 
-@app.route("/download", methods = ["GET", "POST"])
+@app.route("/download", methods = ["POST"])
 def download_video():
     if request.method == "POST":
         buffer = BytesIO()
@@ -42,8 +42,8 @@ def download_video():
         video = url.streams.get_by_itag(itag)
         video.stream_to_buffer(buffer)
         buffer.seek(0)
-        return send_file(buffer, as_attachment=True, download_name=url.title, mimetype="video/mp4") 
-    return render_template('error.html', error="There is an error whil downloading your file please try again later")
+        return send_file(buffer, as_attachment=True, download_name=url.title+'.mp4', mimetype=video.mime_type) 
+    return jsonify({'error': 'Something went wrong'})
 
 @app.errorhandler(404)
 def page_not_found(error):
