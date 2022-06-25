@@ -25,14 +25,6 @@ def youtube():
         }
         return jsonify(data)
 
-@app.route("/facebook")
-def facebook():
-    return render_template("facebook.html")
-
-@app.route("/instagram")
-def instagram():
-    return render_template("instagram.html")
-
 @app.route("/download", methods = ["POST"])
 def download_video():
     if request.method == "POST":
@@ -44,6 +36,10 @@ def download_video():
         buffer.seek(0)
         return send_file(buffer, as_attachment=True, download_name=url.title+'.mp4', mimetype=video.mime_type) 
     return jsonify({'error': 'Something went wrong'})
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')

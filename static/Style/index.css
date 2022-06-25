@@ -45,7 +45,7 @@ body {
 
 .navbar .nav-item:hover .nav-link,
 .navbar .nav-item .nav-link.active {
-  color: lightblue;
+  color: lightcoral;
 }
 
 .navbar .nav-item .nav-link svg{
@@ -56,18 +56,6 @@ body {
 
 .navbar .nav-item .nav-link span{
   align-self: center;
-}
-
-.nav-link.youtube svg path{
-  fill: #FF0000!important;
-}
-
-.nav-link.facebook svg path{
-  fill: #3b5998!important;
-}
-
-.nav-link.instagram svg path{
-  fill: #C13584!important;
 }
 
 .navbar .navbar-toggler:active,
